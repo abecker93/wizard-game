@@ -15,7 +15,6 @@ int main(){
   char heels [6][20]={"heel", "Heel", "bread","Bread","heel of bread","Heel of bread"};
   char platter [12][50]={"platter", "Platter", "cheese","Cheese","onions","Onions","raw onions","Raw onions", "platter of raw onions", "Platter of raw onions", "platter of raw onions and cheese", "Platter of raw onions and cheese"};
   //initial output and input
-  std::cout << "You enter your usual inn and see a strange wizard sitting at the bar.\n"
   std::cout << "Due to the state of his robes, you can tell this wizard has fallen on hard times.\nWould you like to buy him a mug of ale, a heel of bread, or a platter of raw onions and cheese?" << '\n';
   gift_input:
   std::cin >> gift;
