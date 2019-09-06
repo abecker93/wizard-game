@@ -15,10 +15,11 @@ int main(){
   char heels [6][20]={"heel", "Heel", "bread","Bread","heel of bread","Heel of bread"};
   char platter [12][50]={"platter", "Platter", "cheese","Cheese","onions","Onions","raw onions","Raw onions", "platter of raw onions", "Platter of raw onions", "platter of raw onions and cheese", "Platter of raw onions and cheese"};
   //initial output and input
-  std::cout << "You enter your usual inn and see a strange wizard sitting at the bar.\n"
+  std::cout << "You enter your usual inn and see a strange wizard sitting at the bar.\n";
   std::cout << "Due to the state of his robes, you can tell this wizard has fallen on hard times.\nWould you like to buy him a mug of ale, a heel of bread, or a platter of raw onions and cheese?" << '\n';
   gift_input:
   std::cin >> gift;
+  //check for yesses and nos
   int compares = 2;
   int count = 0;
   string check;
@@ -90,7 +91,7 @@ std:cin >> action;
     count = count + 1;
   };
   if (compares==0) {
-	  std::cout << "You don't have to be a dick about it, man. Thanks for the " << gift << " anyways.\n";
+	  std::cout << "You don't have to be a dick about it man. Thanks for the " << gift << " anyways.\n";
 	  std::cout << "The wizard goes back to his business being throughly down on his luck.\nWhat do you want to do now?\n";
 	  goto end_rude_wiz;
   };
@@ -119,13 +120,13 @@ end_rude_wiz:
    std::cin >> action;
 action_check:
   //list all possible recognized actions
-   char actions[13][20]={"look","Look","get","Get", "steal","Steal","go","Go","talk","Talk","search","Search","leave"};
+   char actions[16][20]={"look","Look","get","Get", "steal","Steal","go","Go","talk","Talk","search","Search","leave","exit","Exit","Leave"};
   //get first word of action given
    string first_word_action = action.substr(0,action.find(' '));
   //search actions to see if the action given is listed
   compares = 2;
   count = 0;
-  while (compares!=0 && count<13) {
+  while (compares!=0 && count<16) {
     check = actions[count];
     compares = first_word_action.compare(check);
     count = count + 1;
